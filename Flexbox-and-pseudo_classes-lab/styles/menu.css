@@ -1,9 +1,37 @@
 .nav-bar {
     display: flex;
-    justify-content: flex-start;
-
+    justify-content: center;
 }
+/* when the cursor is hovering over the item it will change color */
 .nav-bar>div {
     height: 50px;
-    background-color: yellow;
+    background-color: #F0F8FF;
+    width: 100%;
+    border: solid 2px #F0FFFF;
+    text-align: center;
+    align-content: center;
+}
+.nav-bar>div:hover {
+    background-color: #8FBC8F;
+}
+/* the flex direction makes it a column */
+.odd-items {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5%;
+    flex-direction: column;
+}
+/* every other item will be Ivory */
+.odd-items>div {
+    width: 30%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    background-color: HoneyDew;
+}
+.odd-items>div:nth-child(odd) {
+    background-color: Ivory;
 }
