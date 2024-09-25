@@ -1,6 +1,8 @@
 .nav-bar {
     display: flex;
     justify-content: center;
+    /* puts the elements in a row */
+    flex-direction: row;
 }
 /* when the cursor is hovering over the item it will change color */
 .nav-bar>div {
@@ -34,4 +36,50 @@
 }
 .odd-items>div:nth-child(odd) {
     background-color: Ivory;
+}
+.grow-box {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-color: Bisque;
+    align-items: center;
+    justify-content: center;
+}
+.grow-box>div {
+    height: 50px;
+    width: 100px;
+    background-color: CadetBlue;
+    margin: 50px;
+    transition-duration: 200ms;
+    text-align: center;
+    align-content: center;
+}
+/* this shows text but when you hover over it it shows different text */
+.grow-box>div>p.ham {
+    visibility: hidden;
+}
+.grow-box>div:hover {
+    p.ham {
+        visibility: visible;
+        color: green;
+    }
+    p.nut {
+        display: none;
+    }
+}
+.grow-box>div:hover {
+    flex-grow: 0.5;
+    background-color: CornflowerBlue;
+    color: orange;
+}
+/* this makes the first child of the first-child class (in this case <p>) blue */
+.first-child>p:first-child {
+    color: blue;
+}
+.you-did {
+    color: Blue;
+}
+/* makes the elements that do not have the who-did class red (you need a space between the containing class and the pseudo class) */
+.you-did :not(p.who-did) {
+    color: red;
 }
